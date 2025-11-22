@@ -17,3 +17,5 @@
     ]
   }
 }
+
+//Define las configuraciones del compilador para un proyecto JavaScript, incluyendo el objetivo de ECMAScript, la resolución de módulos y las rutas de alias.
