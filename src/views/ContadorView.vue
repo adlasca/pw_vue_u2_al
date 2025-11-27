@@ -1,17 +1,18 @@
 <template>
   <div>
-    <h2>Componente desde la vista</h2>
+    <Contador tit="Contador 1" :inicio="3" :mostrar="false"/>
+    <Contador tit="Contador 2" :inicio="5" :mostrar="true"/>
   </div>
 </template>
 
 <script>
-export default {};
+import Contador from "../components/Contador.vue";
+export default {
+  components: {
+    Contador,
+  },
+};
 </script>
 
 <style>
-h2 {
-  color: rgb(51, 51, 102);
-  text-align: center;
-  font-family: Helvetica, sans-serif;
-}
 </style>

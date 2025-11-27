@@ -1,19 +1,15 @@
 <template>
   <div id="app">
     <ContadorView/>
-    <Contador/>
-    <Contador/>
   </div>
 </template>
 
 <script>
 import ContadorView from '../src/views/ContadorView.vue';
-import Contador from '../src/components/Contador.vue';
 export default {
   name: 'App',
   components: {
-    ContadorView,
-    Contador
+    ContadorView
   }
 
 };
@@ -53,4 +49,7 @@ vue.config.js: configuracion personalizada para proyectos Vue CLI
 README.md: archivo de documentacion del proyecto
 package.json: administra las dependencias y scripts del proyecto de forma resumida
 vue.config.js: configuracion personalizada para proyectos Vue CLI, como la configuracion del servidor de desarrollo, alias de rutas y otras opciones avanzadas.
+
+Propiedad Reactiva: capacidad de Vue.js para detectar cambios en los datos y actualizar automaticamente la interfaz de usuario en consecuencia.
+Options API: forma tradicional de definir componentes en Vue.js utilizando opciones como data, methods, computed, etc.
 -->
