@@ -2,7 +2,7 @@
 <template>
   <div>
     <h1>{{ tit }}</h1>
-    <p>{{ numero }} <sup>2</sup>={{ obtenerCuadrado() }}</p>
+    <p >{{ numero }} <sup>2</sup>={{ obtenerCuadrado() }}</p>
     <p>{{ numero }} <sup>2</sup>={{ obtenerCuadrado() }}</p>
     <p>{{ numero }} <sup>3</sup>={{ obtenerCubo }}</p>
     <p>{{ numero }} <sup>3</sup>={{ obtenerCubo }}</p>
