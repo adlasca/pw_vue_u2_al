@@ -66,7 +66,7 @@ export default {
 </script>
 
 <!-- Elementos CSS-->
-<style>
+<style scoped>
 h1,
 p {
   color: rgb(51, 51, 102);

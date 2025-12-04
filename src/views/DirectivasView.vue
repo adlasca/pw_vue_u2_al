@@ -1,5 +1,8 @@
 <template>
-  <Directivas />
+  <div class="view-container">
+    <Directivas />
+    <h2>Tabla</h2>
+  </div>
 </template>
 
 <script>
@@ -11,5 +14,16 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+.view-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h2 {
+  font-family: 'Courier New', Courier, monospace;
+  margin-top: 20px;
+  
+}
+
 </style>
