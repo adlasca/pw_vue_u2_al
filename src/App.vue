@@ -1,18 +1,21 @@
 <template>
   <div id="app">
     <!--""<ContadorView/>-->
-    <DirectivasView/>
+    <!--<DirectivasView/>-->
+    <PreguntaView/>
   </div>
 </template>
 
 <script>
 import ContadorView from '../src/views/ContadorView.vue';
 import DirectivasView from '../src/views/DirectivasView.vue';
+import PreguntaView from '../src/views/PreguntaView.vue';
 export default {
   name: 'App',
   components: {
     ContadorView,
-    DirectivasView
+    DirectivasView,
+    PreguntaView
   }
 
 };
@@ -55,4 +58,12 @@ vue.config.js: configuracion personalizada para proyectos Vue CLI, como la confi
 
 Propiedad Reactiva: capacidad de Vue.js para detectar cambios en los datos y actualizar automaticamente la interfaz de usuario en consecuencia.
 Options API: forma tradicional de definir componentes en Vue.js utilizando opciones como data, methods, computed, etc.
+
+Operaciones computadas: propiedades que se calculan en funcion de otros datos y se actualizan automaticamente cuando esos datos cambian.
+
+API: Interfaz de Programacion de Aplicaciones, conjunto de reglas y definiciones que permiten la comunicacion entre diferentes componentes de software.
+Rest API: estilo arquitectonico para diseñar servicios web que utilizan los metodos HTTP para interactuar con los recursos.
+Soap API: protocolo de mensajeria basado en XML para intercambiar informacion entre aplicaciones a traves de la red.
+
+El frontend se comunica con el backend a traves de un cliente HTTP, que puede ser una libreria como Axios o la API Fetch nativa de JavaScript.
 -->

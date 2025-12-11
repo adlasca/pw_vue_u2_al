@@ -61,7 +61,6 @@ export default {
         console.log(event.charCode);
         this.arreglo.push(est);
         this.limpiarFormulario();
-      
     },
     limpiarFormulario() {
       this.nombre = null;
