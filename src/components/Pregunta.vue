@@ -1,20 +1,55 @@
 <template>
   <div>
-    <img
-      src="https://yesno.wtf/assets/yes/3-422e51268d64d78241720a7de52fe121.gif"
-      alt="Imagen relacionada con la pregunta"
+    <img v-if="imagen"
+      :src="imagen"
+      alt="Error en imagen "
     />
     <div class="pregunta-container">
-      <input type="text" placeholder="Hacer pregunta" />
+      <input v-model="pregunta" type="text" placeholder="Hacer pregunta" />
       <p>Debes terminar con el signo de pregunta</p>
-      <h2>Esto es una pregunta?</h2>
-      <h2>SÍ, NO</h2>
+      <h2>{{ pregunta }}</h2>
+      <h2> {{ respuesta }}</h2>
+      <h3>{{ contador }}</h3>
+      
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      pregunta: null,
+      respuesta:null,
+      imagen: null,
+      contador: 0,
+    };
+  },
+  watch: {
+    pregunta(value, oldValue) {
+      if (value.includes("?")) {
+        // Llamar a la API solo si la pregunta termina con un signo de interrogación
+        this.respuesta = "Cargando...";
+        this.contador += 1;
+        this.consumir();
+      }
+    },
+  },
+  methods: {
+    async consumir() {
+      const res = await consumirAPIFacade();
+      console.log("Es una pregunta");
+      console.log(res);
+      console.log(res.answer);
+      this.respuesta = res.answer;
+      this.imagen = res.image;
+    },
+  },
+};
+import {
+  consumirAPIFacade,
+  consumirAPIFacade2,
+} from "../clients/yesnoClient.js";
 </script>
  
 <style>
@@ -35,7 +70,7 @@ img {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
 }
 
 input {
@@ -53,7 +88,9 @@ input:focus {
   border: 1px solid rgba(81, 203, 238, 1);
 }
 
-h1, h2, p {
+h1,
+h2,
+p {
   margin: 5px 0;
 }
 
@@ -64,6 +101,10 @@ p {
 
 h2 {
   margin-top: 30px;
+}
+body {
+  background-color: black;
+  color: black;
 }
 </style>
 
