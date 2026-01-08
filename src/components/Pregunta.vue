@@ -52,7 +52,7 @@ import {
 } from "../clients/yesnoClient.js";
 </script>
  
-<style>
+<style scoped>
 img {
   width: 100vw;
   height: 100vh;
@@ -104,7 +104,7 @@ h2 {
 }
 body {
   background-color: black;
-  color: black;
+  color: rgb(255, 255, 255);
 }
 </style>
 
