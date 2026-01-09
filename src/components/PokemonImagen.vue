@@ -27,9 +27,10 @@ export default {
 <style>
 img {
   width: 200px;
-  background-color: rgb(202, 223, 83);
+  background-color: rgb(28, 104, 190);
   border-radius: 10px;
-    border: solid black 2px;
+  border: solid black 2px;
+  height: 200px;
 }
 .pokeImg-container {
   display: flex;
